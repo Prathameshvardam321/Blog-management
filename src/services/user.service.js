@@ -14,8 +14,8 @@ import { checkEmail } from '../utils/user.util';
 
 export const register = async (body) => {
   try {
-    const { Email ,UserName } = body
-    const data = await User.findOne({ Email })
+    const { email ,UserName } = body
+    const data = await User.findOne({ email })
     // const dataName = await User.findOne({UserName})
     return checkEmail(body, data)
   } catch (error) {
